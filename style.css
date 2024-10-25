@@ -11,16 +11,28 @@
 }
 
 body {
-    background-color: var(--sfondo-color);
+    /* background-color: var(--sfondo-color);
     color: var(--testo-color);
     background-image: radial-gradient(circle, var(--pallino-color) 1px, rgba(0, 0, 0, 0) 1px);
-    background-size: 30px 30px;
+    background-size: 30px 30px; */
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: background-color 0.3s ease;
     font-family: 'Rubik', sans-serif;
+}
+
+.wallpaper {
+    background-color: var(--sfondo-color);
+    color: var(--testo-color);
+    background-image: radial-gradient(circle, var(--pallino-color) 1px, rgba(0, 0, 0, 0) 1px);
+    background-size: 30px 30px;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    position: fixed;
+    top: 0;
 }
 
 .dot {
@@ -32,7 +44,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    box-shadow: 0 0 600px 300px rgba(255, 255, 255, 0.07);
+    box-shadow: 0 0 600px 300px rgba(255, 255, 255, 0.09);
 }
 
 a {
@@ -221,7 +233,6 @@ h1 {
 .point-2 { top: 100px; }
 .point-3 { top: 200px; }
 .point-4 { top: 320px; }
-.point-5 { top: 320px; }
 .point-6 { top: 425px; }
 .point-7 { top: 530px; }
 .point-8 { top: 640px; background: #744dff }
@@ -496,7 +507,7 @@ h1 {
 
 .triangle {
     position: absolute;
-    left: -30px;
+    left: -31px;
     top: 180px;
     transform: translateX(-50%);
     width: 0;
@@ -552,4 +563,137 @@ h1 {
 .resume:hover {
     background-color: var(--testo-color);
     color: var(--sfondo-color);
+}
+
+@media (max-width: 630px) {
+    .center {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        color: var(--testo-color);
+        width: 300px;
+        margin-top: 150px;
+    }
+
+    .center .t-2 a {
+        padding: 10px;
+        gap: 0px;
+        border: 1px solid var(--pallino-color);
+    }
+
+    .center a[href="https://discord.com/users/698274441024766024"],
+    .center a[href="https://t.me/TristeFare"],
+    .center a[href="https://github.com/S0dxu/"],
+    .center a[href="mailto:saddoooh@gmail.com"] {
+        font-size: 0 !important;
+    }
+
+    .sidebar {
+        top: 10px;
+        left: 45%;
+        transform: translateX(-50%);
+        transform: rotate(-90deg);
+    }
+
+    .sidebar i {
+        transform: rotate(90deg);
+    }
+
+    .sun {
+        display: none;
+        width: 30px;
+    }
+    
+    .moon {
+        display: flex;
+        width: 30px;
+    }
+
+    .center h3 {
+        font-size: 30px;
+    }
+
+    .center .colorfull-bg {
+        font-size: 35px;
+        letter-spacing: -1px;
+        margin-top: -35px;
+    }
+
+    .underlined {
+        left: 115px;
+        width: 105px !important;
+    }
+
+    .right,
+    .left {
+        width: 120px;
+        left: 20px;
+        position: relative;
+    }
+
+    .right p,
+    .left p {
+        width: 100%;
+    }
+
+    .left p {
+        right: 60px;
+        position: relative;
+    }
+
+    .right p {
+        left: 20px;
+        position: relative;
+    }
+
+    .line-of-time {
+        position: relative;
+        left: 40px;
+        height: 800px;
+    }
+
+    .point-1 { top: 0px; }
+    .point-2 { top: 130px; }
+    .point-3 { top: 230px; }
+    .point-4 { top: 350px; }
+    .point-5 { top: 472px; }
+    .point-6 { top: 615px; }
+    .point-8 { top: 640px; background: #744dff }
+
+    .left .para {
+        margin-top: 125px;
+    }
+    
+    .left .cnt-2 {
+        margin-top: -15px;
+    }
+    
+    .left .cnt-3 {
+        margin-top: 155px;
+    }
+    
+    .right .cnt-2 {
+        margin-top: 124px;
+    }
+    
+    .right .cnt-3 {
+        margin-top: 155px;
+    }
+    
+    .right .cnt-4 {
+        margin-top: 130px;
+    }
+    
+    .right {
+        width: 299px;
+    }
+    
+    .right .para {
+        margin-top: -5px;
+    }
+    
+    .right p {
+        margin-left: 15px;
+        margin-right: 60px;
+    }
 }
